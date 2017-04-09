@@ -26,7 +26,11 @@ def getCustomerDataByColumnName(columnName):
     
 if __name__ == '__main__':
     dateTimeNow()
+    
     firstNames = getCustomerDataByColumnName("FirstName")
     lastNames = getCustomerDataByColumnName("LastName")
     customers = zip(firstNames, lastNames)
+    
     print [str.format("{0} {1}", customer[0], customer[1]) for customer in customers]
+    
+    _dbConnection.close()
