@@ -16,4 +16,3 @@ def connect_to_db():
 def connect_to_db_with_connector(dbConnector):
     db = pymysql.connect(dbConnector.servername, dbConnector.username, dbConnector.password, dbConnector.database)
     return db
-    
